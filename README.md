@@ -9,7 +9,7 @@ Once all terms are added (At least one per party), the deployer calls start(uint
 escrow to the Initialized state and sets a time limit for both parties to deposit assets per their terms.
 
 Then, if the blocktime exceeds the deadline_ the contract will transition to the Voided state when checkState() is called.
-In the Voided state, both parties can withdraw any assets they deposited using depositA and depositB respectively.
+In the Voided state, both parties can withdraw any assets they themselves deposited using withdrawA() and withdrawB() respectively.
 
 If both parties fulfil their escrow terms, before the deadline_ is reached, the contract will transition to the Executed
 state when checkState() is called. 
